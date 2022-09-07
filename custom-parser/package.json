@@ -1,0 +1,16 @@
+{
+  "name": "custom-parser",
+  "version": "1.0.0",
+  "description": "custom parser used to parse ble communication data from json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parse": "yarn tsc && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.15",
+    "typescript": "^4.8.2"
+  }
+}
