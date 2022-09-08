@@ -1,7 +1,7 @@
 {
   "name": "custom-parser",
   "version": "1.0.0",
-  "description": "custom parser used to parse ble communication data from json file",
+  "description": "custom parser used to parse ble communication data from json file(parse_result.json)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
