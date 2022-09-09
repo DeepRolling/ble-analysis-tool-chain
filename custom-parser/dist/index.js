@@ -12,7 +12,7 @@ const frames = JSON.parse(rawData.replace(/^\uFEFF/, ''));
 // console.log(JSON.stringify(frames))
 //validate json file, if json file is invalid, exist with error code
 const connectIndicatorFrames = frames.filter((eachFrame) => {
-    return eachFrame._source.layers.btle["btle.initiator_address"] !== undefined;
+    return eachFrame._source.layers.btle["btle.initiator_address"] !== undefined && eachFrame._source.layers.btle["btle.advertising_address"] === "f6:41:14:f3:8c:aa";
 });
 if (connectIndicatorFrames.length !== 1) {
     process.exit(EXIT_ERROR_CODE_INVALID_PACKET);

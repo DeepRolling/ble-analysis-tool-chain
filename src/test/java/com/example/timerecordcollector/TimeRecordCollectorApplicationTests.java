@@ -8,6 +8,7 @@ class TimeRecordCollectorApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

@@ -1,2 +1,6 @@
-package com.example.timerecordcollector.autoRunner;public interface AutomationExecutionCallback {
+package com.example.timerecordcollector.autoRunner;
+
+public interface AutomationExecutionCallback {
+    void onSuccess(ParserResult parserResult);
+    void onFail(AutomationExecuteFailReason reason);
 }

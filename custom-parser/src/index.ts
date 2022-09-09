@@ -15,6 +15,7 @@ type EachBleFrame = {
                 //master address, if this field exist with "btle.advertising_header", this packet is CONNECT_IND
                 //NOTICE : this packet should only display once within json file due to capturing strategy
                 "btle.initiator_address"?: string,
+                "btle.advertising_address"?: string,
                 //these fields exist or un-exist together
                 "btle.master_bd_addr"?: string,
                 "btle.slave_bd_addr"?: string,
@@ -69,7 +70,7 @@ const frames: EachBleFrame[] = JSON.parse(rawData.replace(/^\uFEFF/, ''));
 
 //validate json file, if json file is invalid, exist with error code
 const connectIndicatorFrames = frames.filter((eachFrame) => {
-    return eachFrame._source.layers.btle["btle.initiator_address"] !== undefined && eachFrame._source.layers.btle["btle.advertising_header"] === "f6:41:14:f3:8c:aa"
+    return eachFrame._source.layers.btle["btle.initiator_address"] !== undefined && eachFrame._source.layers.btle["btle.advertising_address"] === "f6:41:14:f3:8c:aa"
 })
 if (connectIndicatorFrames.length !== 1) {
     process.exit(EXIT_ERROR_CODE_INVALID_PACKET)
